@@ -26739,4 +26739,76 @@ input[type=checkbox].three-state-checkbox + .control-label {
   pointer-events: none;
 }
 
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cutom-scroll {
+  padding: 72px 27px 43px 12px;
+}
+
+.login-custom {
+  height: 145px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-text-form {
+  border: 2px #f3f2f2 solid;
+  background: rgb(199, 199, 199);
+  border-radius: 10px;
+  padding: 40px 0px 80px 0px;
+}
+
+.cus-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-group .control-label {
+  overflow: hidden;
+  margin-bottom: 4px;
+  text-align: left;
+  text-overflow: ellipsis;
+  color: #276c95;
+  font-size: 14px;
+  width: 382px;
+  font-weight: 600;
+}
+
+.cus-form .form-control:not([readonly]):focus {
+  border-color: #7fbdc3;
+  outline: 0;
+  background-color: #79b1b6;
+}
+
+.btn-primary {
+  color: #fff;
+  border-color: #04969c;
+  background-color: rgb(6, 179, 187);
+}
+
+.btn-primary:hover {
+  color: #fff;
+  border-color: #42c2c8;
+  background-color: #0aabb3;
+}
+
+.btn-primary:focus {
+  color: #fff;
+  border-color: #48b1d2;
+  background-color: #0e92bb;
+}
+
+.cus-img {
+  width: 450px;
+  /* max-height: 70px; */
+  /* max-width: 80px; */
+  height: 500px;
+}
+
 /*# sourceMappingURL=theme.compiled.css.map */
