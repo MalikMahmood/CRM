@@ -26871,12 +26871,19 @@ input[type=checkbox].three-state-checkbox + .control-label {
   /* background-color: #2eb15417; */
   color: #f6f6f6;
   background: #1faea8;
+  border-color: #34d4cd;
 }
 
 .btn-success.btn-bordered:hover {
   color: #fff;
   border-color: #34d4cd;
   background-color: #adedec;
+}
+
+.btn-success.btn-bordered:focus {
+  color: #ebefff;
+  border-color: #e7e7e9;
+  background-color: #1ab9bc;
 }
 
 .btn-primary.btn-bordered {
@@ -26890,6 +26897,12 @@ input[type=checkbox].three-state-checkbox + .control-label {
   background-color: #adedec;
 }
 
+.btn-primary.btn-bordered:focus {
+  color: #ebefff;
+  border-color: #e7e7e9;
+  background-color: #1ab9bc;
+}
+
 .btn-inverse.btn-bordered {
   background-color: #1faea8;
   color: #f1ebeb;
@@ -26900,6 +26913,17 @@ input[type=checkbox].three-state-checkbox + .control-label {
   color: #fff;
   border-color: #34d4cd;
   background-color: #adedec;
+}
+
+.btn-inverse.btn-bordered:focus {
+  color: #ebefff;
+  border-color: #e7e7e9;
+  background-color: #1ab9bc;
+}
+
+.layout-atlas-responsive-topbar .region-topbar {
+  padding: 0 16px;
+  background-color: #46a5a7;
 }
 
 /*# sourceMappingURL=theme.compiled.css.map */
