@@ -26867,4 +26867,39 @@ input[type=checkbox].three-state-checkbox + .control-label {
   background-color: #158e89;
 }
 
+.btn-success.btn-bordered {
+  /* background-color: #2eb15417; */
+  color: #f6f6f6;
+  background: #1faea8;
+}
+
+.btn-success.btn-bordered:hover {
+  color: #fff;
+  border-color: #34d4cd;
+  background-color: #adedec;
+}
+
+.btn-primary.btn-bordered {
+  background-color: #1faea8;
+  color: #f1f1f2;
+}
+
+.btn-primary.btn-bordered:hover {
+  color: #fff;
+  border-color: #34d4cd;
+  background-color: #adedec;
+}
+
+.btn-inverse.btn-bordered {
+  background-color: #1faea8;
+  color: #f1ebeb;
+  border-color: #1faea8;
+}
+
+.btn-inverse.btn-bordered:hover {
+  color: #fff;
+  border-color: #34d4cd;
+  background-color: #adedec;
+}
+
 /*# sourceMappingURL=theme.compiled.css.map */
