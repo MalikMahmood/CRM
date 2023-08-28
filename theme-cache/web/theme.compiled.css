@@ -26811,4 +26811,60 @@ input[type=checkbox].three-state-checkbox + .control-label {
   height: 500px;
 }
 
+.btn-default {
+  color: #f4f4f4;
+  border-color: rgba(116, 171, 172, 0.7607843137);
+  background-color: #46a5a7;
+  border-radius: 9px;
+}
+
+.btn-default:hover {
+  color: #f6f6f6;
+  border-color: #e7e7e9;
+  background-color: #2bd2c7;
+}
+
+.layout-atlas-topbar {
+  position: relative;
+  z-index: 2;
+  min-height: 48px;
+  background-color: #158e89;
+}
+
+.layout-atlas-sidebar {
+  background-color: #158e89;
+  z-index: 101;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 2px 4px 8px rgba(0, 0, 0, 0.28);
+}
+
+.layout-atlas .region-sidebar {
+  background-color: #158e89;
+  z-index: 101;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 2px 4px 8px rgba(0, 0, 0, 0.28);
+}
+
+.layout-signout .region-sidebar .mx-navigationtree .navbar-inner > ul > li > a {
+  color: #fff;
+  border-color: #171946;
+  background-color: #158e89;
+  font-size: 14px;
+}
+
+.side-region .region-sidebar .mx-navigationtree .navbar-inner > ul > li > a {
+  color: #fff;
+  border-color: #171946;
+  background-color: #158e89;
+  font-size: 14px;
+}
+
+.layout-atlas-responsive .region-topbar, .layout-atlas-responsive-default .region-topbar {
+  padding: 0 8px;
+  background-color: #158e89;
+}
+
+.layout-atlas .region-sidebar .mx-navigationtree .navbar-inner > ul > li > a {
+  padding: 16px;
+  background-color: #158e89;
+}
+
 /*# sourceMappingURL=theme.compiled.css.map */
