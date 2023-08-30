@@ -74,7 +74,11 @@
     color: #f4f4f4;
     border-color: #74abacc2;
     background-color: #46a5a7;
-    border-radius: 9px;
+    width: 175px;
+    height: 80px;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 25px;
 }
 .btn-default:hover{
     color: #f6f6f6;
@@ -82,6 +86,12 @@
     background-color: #2bd2c7;
 
 }
+.btn-default:focus{
+    color: #f1f1f1;
+    border-color: #e7e7e9;
+    background-color: #6c9596;
+}
+
 
 .layout-atlas-topbar {
     position: relative;
@@ -118,9 +128,9 @@
 .side-region{
 .region-sidebar .mx-navigationtree .navbar-inner > ul > li > a {
     color: #fff;
-    border-color: #171946;
+    border-color: #9fced1;
     background-color: #158e89;
-    font-size: 14px;
+    font-size: 16px;
 }
 }
 .layout-atlas-responsive .region-topbar, .layout-atlas-responsive-default .region-topbar {
@@ -180,6 +190,47 @@ background-color: #1ab9bc;
 .layout-atlas-responsive-topbar .region-topbar {
     padding: 0 16px;
     background-color: #46a5a7;
+}
+.region-topbar .mx-navbar ul.nav > .mx-navbar-item.active a{
+    color: #fff;
+    background-color: #b2dfe0;
+}
+.region-topbar .mx-navbar ul.nav > li.mx-navbar-item > a:focus{
+    color: #fff;
+    background-color: #9ecccd;
+}
+.region-topbar .mx-navbar ul.nav > li.mx-navbar-item > a:hover{
+    color: #fff;
+    background-color: #9ecccd;
+}
+.layout-atlas .region-topbar .navbar-brand img {
+    display: inline-block;
+    margin-right: 8px;
+    width: auto;
+    height: 50px;
+}
+.region-topbar .mx-navbar ul.nav > li.mx-navbar-item > a {
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.2;
+}
+.text-bold {
+    font-weight: bold !important;
+    font-size: 35px;
+}
+.text-large {
+    font-size: 28px !important;
+}
+.mx-groupbox > .mx-groupbox-header {
+    margin: 0;
+    color: #0a1325;
+    border-width: 1px 1px 0 1px;
+    border-style: solid;
+    border-color: #e7e7e9;
+    background: #43bab7;
+    font-size: 14px;
+    border-radius: 4px 4px 0 0;
+    padding: 12px 16px;
 }
 
 
