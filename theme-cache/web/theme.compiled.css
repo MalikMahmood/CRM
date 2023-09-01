@@ -27063,4 +27063,11 @@ input[type=checkbox].three-state-checkbox + .control-label {
   font-weight: 500;
 }
 
+.admin-lan-text {
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: -58px;
+  text-align: center;
+}
+
 /*# sourceMappingURL=theme.compiled.css.map */
