@@ -26790,6 +26790,8 @@ input[type=checkbox].three-state-checkbox + .control-label {
   color: #fff;
   border-color: #04969c;
   background-color: rgb(6, 179, 187);
+  margin-top: 6px;
+  margin-bottom: 17px;
 }
 
 .btn-primary:hover {
@@ -27202,6 +27204,15 @@ input[type=checkbox].three-state-checkbox + .control-label {
   color: #0d0d0d;
   /* background-color: rgb(192, 208, 208); */
   background-color: #b8ebea;
+}
+
+.login-box {
+  border: 0px solid rgb(66, 170, 171);
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 399px;
+  padding: 36px 42px 39px 25px;
+  border-radius: 14px;
 }
 
 /*# sourceMappingURL=theme.compiled.css.map */
