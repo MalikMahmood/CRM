@@ -26811,7 +26811,7 @@ input[type=checkbox].three-state-checkbox + .control-label {
   height: 500px;
 }
 
-.btn-default {
+.custom-default-button .btn-default {
   color: #46a5a7;
   border-color: rgba(116, 171, 172, 0.7607843137);
   background-color: #ffffff;
@@ -26821,14 +26821,12 @@ input[type=checkbox].three-state-checkbox + .control-label {
   font-size: 20px;
   border-radius: 25px;
 }
-
-.btn-default:hover {
+.custom-default-button .btn-default:hover {
   color: #f6f6f6;
   border-color: #e7e7e9;
   background-color: #1e2424;
 }
-
-.btn-default:focus {
+.custom-default-button .btn-default:focus {
   color: #f1f1f1;
   border-color: #e7e7e9;
   background-color: #252829;
@@ -27033,7 +27031,7 @@ input[type=checkbox].three-state-checkbox + .control-label {
 
 .lan-text {
   text-align: center;
-  margin-top: 7px;
+  margin-top: 18px;
   font-weight: 700;
   font-size: 29px;
 }
@@ -27136,6 +27134,67 @@ input[type=checkbox].three-state-checkbox + .control-label {
   border-top: 1px solid #ced0d3;
   margin-top: 10px;
   border-radius: 10px;
+}
+
+.lead-but {
+  width: 84px;
+  height: 38px;
+  border-radius: 3px;
+  padding-top: 6px;
+  padding-left: 12px;
+  font-size: 15px;
+  font-weight: 500;
+  background-color: #8ad3d4;
+  color: white;
+}
+
+.lead-but:hover {
+  color: rgb(246, 246, 246);
+  border-color: rgb(231, 231, 233);
+  background-color: rgb(141, 171, 171);
+}
+
+.lead-but:focus {
+  color: #f1f1f1;
+  border-color: #e7e7e9;
+  background-color: #94d2e6;
+}
+
+.contact-but {
+  height: 38px;
+  border-radius: 3px;
+  padding-top: 6px;
+  padding-left: 12px;
+  font-size: 15px;
+  font-weight: 500;
+  background-color: #8ad3d4;
+  color: white;
+  width: 108px;
+}
+
+.contact-but:hover {
+  color: rgb(246, 246, 246);
+  border-color: rgb(231, 231, 233);
+  background-color: rgb(141, 171, 171);
+}
+
+.contact-but:focus {
+  color: #f1f1f1;
+  border-color: #e7e7e9;
+  background-color: #94d2e6;
+}
+
+.mx-groupbox > h5.mx-groupbox-header, .mx-groupbox > .mx-groupbox-header.widget-eventTime, .mx-groupbox > .mx-groupbox-header.widget-timeline-title {
+  font-size: 14px;
+  margin: 0;
+  color: #0a1325;
+  border-width: 1px 1px 0 1px;
+  border-style: solid;
+  border-color: #e7e7e9;
+  background: #b8ebea;
+  font-size: 14px;
+  border-radius: 4px 4px 0 0;
+  padding: 12px 16px;
 }
 
 /*# sourceMappingURL=theme.compiled.css.map */
