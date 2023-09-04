@@ -27197,4 +27197,11 @@ input[type=checkbox].three-state-checkbox + .control-label {
   padding: 12px 16px;
 }
 
+.mx-groupbox > h4.mx-groupbox-header {
+  font-size: 18px;
+  color: #0d0d0d;
+  /* background-color: rgb(192, 208, 208); */
+  background-color: #b8ebea;
+}
+
 /*# sourceMappingURL=theme.compiled.css.map */
