@@ -50,7 +50,9 @@
     color: #fff;
     border-color: #04969c;
     background-color: rgb(6 179 187);
-   
+    margin-top: 6px;
+    margin-bottom: 17px;
+    
 
 }
 .btn-primary:hover{
@@ -465,4 +467,25 @@ border-radius: 20px;
     color: #0d0d0d;
     /* background-color: rgb(192, 208, 208); */
     background-color: #b8ebea;
+}
+// .mx-groupbox > .mx-groupbox-header {
+//     margin: 0;
+//     color: #0a1325;
+//     border-width: 1px 1px 0 1px;
+//     border-style: solid;
+//     border-color: #e7e7e9;
+//     font-size: 18px;
+//     border-radius: 4px 4px 0 0;
+//     padding: 12px 16px;
+//     background-color: #b8ebea;
+// }
+.login-box{
+    border: 0px solid rgb(66, 170, 171);
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 399px;
+   
+    padding: 36px 42px 39px 25px;
+    border-radius: 14px;
+
 }
