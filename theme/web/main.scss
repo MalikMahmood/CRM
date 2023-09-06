@@ -278,14 +278,14 @@ background-color: #1ab9bc;
 
 }
 }
-.card1-border-20 .card1{
+.card-border-20 .card{
 border-radius: 20px;
 }
 .same-height-card1{
     .card1{
     
-        height: 245px;
-    
+        height: 256px;
+        background-color: #fff;
     }
     .card1:hover{
     
@@ -297,6 +297,15 @@ border-radius: 20px;
     }
     .card1-border-20 .card1{
     border-radius: 20px;
+    }
+    .Img_CRM_size{
+        display: block;
+        max-width: 100%;
+        height: 209px;
+        margin-left: 6px;
+        width: 265px;
+        border-radius: 26px;
+        padding-top: 9px;
     }
 .row{
     display: flex;
@@ -335,9 +344,9 @@ border-radius: 20px;
     font-weight: 500;
 }
 .admin-lan-text{
-    font-size: 14px;
-    font-weight: 500;
-    margin-left: -58px;
+    font-size: 26px;
+    font-weight: 600;
+    margin-left: -3px;
     text-align: center;
 }
 .back-but-org{
