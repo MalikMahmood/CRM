@@ -278,9 +278,26 @@ background-color: #1ab9bc;
 
 }
 }
-.card-border-20 .card{
+.card1-border-20 .card1{
 border-radius: 20px;
 }
+.same-height-card1{
+    .card1{
+    
+        height: 245px;
+    
+    }
+    .card1:hover{
+    
+        transition: 0.2s;
+    
+        transform: scale(1.03);
+    
+    }
+    }
+    .card1-border-20 .card1{
+    border-radius: 20px;
+    }
 .row{
     display: flex;
     flex-wrap: wrap;
@@ -318,8 +335,8 @@ border-radius: 20px;
     font-weight: 500;
 }
 .admin-lan-text{
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 500;
     margin-left: -58px;
     text-align: center;
 }
@@ -488,17 +505,24 @@ border-radius: 20px;
     padding: 36px 42px 39px 25px;
     border-radius: 14px;
 
+// <<<<<<< .mine
 }
-.custom-editpage.con{
-    width: 1086px;
-    height: 281px;
-    position: relative;
-    top: -293.9938px;
-    opacity: 1;
-    z-index: 102;
-    left: 43.0109px;
+.mx-scrollcontainer .mx-placeholder {
+    width: 100%;
+    height: 100%;
+    background: #d2ded7;
+}
 
-}
+// .custom-editpage.con{
+//     width: 1086px;
+//     height: 281px;
+//     position: relative;
+//     top: -293.9938px;
+//     opacity: 1;
+//     z-index: 102;
+//     left: 43.0109px;
+
+// }
 .mx-window {
     position: fixed;
     left: auto;

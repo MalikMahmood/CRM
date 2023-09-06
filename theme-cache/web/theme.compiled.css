@@ -27020,7 +27020,19 @@ input[type=checkbox].three-state-checkbox + .control-label {
   transform: scale(1.03);
 }
 
-.card-border-20 .card {
+.card1-border-20 .card1 {
+  border-radius: 20px;
+}
+
+.same-height-card1 .card1 {
+  height: 245px;
+}
+.same-height-card1 .card1:hover {
+  transition: 0.2s;
+  transform: scale(1.03);
+}
+
+.card1-border-20 .card1 {
   border-radius: 20px;
 }
 
@@ -27065,8 +27077,8 @@ input[type=checkbox].three-state-checkbox + .control-label {
 }
 
 .admin-lan-text {
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 500;
   margin-left: -58px;
   text-align: center;
 }
@@ -27215,14 +27227,10 @@ input[type=checkbox].three-state-checkbox + .control-label {
   border-radius: 14px;
 }
 
-.custom-editpage.con {
-  width: 1086px;
-  height: 281px;
-  position: relative;
-  top: -293.9938px;
-  opacity: 1;
-  z-index: 102;
-  left: 43.0109px;
+.mx-scrollcontainer .mx-placeholder {
+  width: 100%;
+  height: 100%;
+  background: #d2ded7;
 }
 
 .mx-window {
