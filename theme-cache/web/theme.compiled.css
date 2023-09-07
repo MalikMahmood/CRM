@@ -27065,8 +27065,9 @@ input[type=checkbox].three-state-checkbox + .control-label {
   background-image: url(7028077\ 1.png);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100%;
-  width: 1227;
+  height: 629px;
+  width: auto;
+  margin-top: -24px;
   background-position: center;
 }
 
@@ -27311,12 +27312,12 @@ input[type=checkbox].three-state-checkbox + .control-label {
 .mx-scrollcontainer .mx-placeholder {
   width: 100%;
   height: 100%;
-  background: #ffffff;
+  background: #d2ded7;
 }
 
 .mx-scrollcontainer-fixed > .mx-scrollcontainer-middle > .mx-scrollcontainer-wrapper, .mx-scrollcontainer-fixed > .mx-scrollcontainer-left > .mx-scrollcontainer-wrapper, .mx-scrollcontainer-fixed > .mx-scrollcontainer-center > .mx-scrollcontainer-wrapper, .mx-scrollcontainer-fixed > .mx-scrollcontainer-right > .mx-scrollcontainer-wrapper {
   overflow: auto;
-  height: 85vh;
+  height: auto;
 }
 
 .mx-window-content {
