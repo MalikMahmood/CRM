@@ -26792,6 +26792,7 @@ input[type=checkbox].three-state-checkbox + .control-label {
   background-color: rgb(6, 179, 187);
   margin-top: 6px;
   margin-bottom: 17px;
+  border-radius: 10px;
 }
 
 .btn-primary:hover {
@@ -27096,13 +27097,9 @@ input[type=checkbox].three-state-checkbox + .control-label {
 }
 
 .back-but-org {
-  width: 79px;
-  height: 34px;
-  border-radius: 3px;
-  padding-top: 4px;
-  padding-left: 8px;
-  font-size: 16px;
-  font-weight: 600;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
   background-color: #46a5a7;
   color: white;
 }
@@ -27372,6 +27369,14 @@ input[type=checkbox].three-state-checkbox + .control-label {
   height: 35px;
   padding: 8px 16px;
   border-radius: 4px;
+}
+
+.button-org {
+  background: rgba(234, 229, 229, 0.7882352941);
+  color: #000000;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
 }
 
 .custom-admin-bg-img {
