@@ -27076,7 +27076,7 @@ input[type=checkbox].three-state-checkbox + .control-label {
 }
 
 .welcome-text {
-  color: #fff;
+  color: #000;
   font-size: 35px;
   font-weight: 700;
   font-family: "Lato", sans-serif;
@@ -27150,14 +27150,6 @@ input[type=checkbox].three-state-checkbox + .control-label {
   opacity: 1;
   color: #ffffff;
   text-shadow: none;
-}
-
-.org-bg-img {
-  background-image: url(bg-img-org.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 527px;
 }
 
 .cust-list-view .mx-listview > ul > li {
@@ -27369,6 +27361,19 @@ input[type=checkbox].three-state-checkbox + .control-label {
   overflow: hidden;
 }
 
+.mx-navigationtree .navbar-inner > ul > li > a img {
+  width: 20px;
+  height: auto;
+  margin-right: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 35px;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
 .custom-admin-bg-img {
   background-color: #eafafa;
   background-repeat: no-repeat;
@@ -27388,6 +27393,7 @@ input[type=checkbox].three-state-checkbox + .control-label {
   height: 200px;
   background-color: #fff;
   transition: 0.6s;
+  margin-bottom: 30px;
 }
 
 .class-card:hover {
