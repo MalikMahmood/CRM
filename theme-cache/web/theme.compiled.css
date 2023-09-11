@@ -27349,9 +27349,6 @@ input[type=checkbox].three-state-checkbox + .control-label {
 }
 
 .mx-navigationtree .navbar-inner > ul > li > a img {
-  width: 20px;
-  height: auto;
-  margin-right: 0.5em;
   display: flex;
   align-items: center;
   justify-content: center;
