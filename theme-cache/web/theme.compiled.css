@@ -27273,16 +27273,6 @@ input[type=checkbox].three-state-checkbox + .control-label {
   background: #d2ded7;
 }
 
-/* // .custom-editpage.con{
-//     width: 1086px;
-//     height: 281px;
-//     position: relative;
-//     top: -293.9938px;
-//     opacity: 1;
-//     z-index: 102;
-//     left: 43.0109px;
-
-// } */
 .mx-window {
   position: fixed;
   left: auto;
@@ -27359,9 +27349,6 @@ input[type=checkbox].three-state-checkbox + .control-label {
 }
 
 .mx-navigationtree .navbar-inner > ul > li > a img {
-  width: 20px;
-  height: auto;
-  margin-right: 0.5em;
   display: flex;
   align-items: center;
   justify-content: center;
