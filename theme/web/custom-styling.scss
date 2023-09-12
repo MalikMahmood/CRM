@@ -46,12 +46,15 @@
 }
 }
 .btn-primary{
-    color: #fff;
-    border-color: #04969c;
-    background-color: rgb(6 179 187);
-    margin-top: 6px;
-    margin-bottom: 17px;
-    border-radius: 10px;
+    
+        color: #fff;
+        border-color: #04969c;
+        background-color: rgb(6, 179, 187);
+        margin-top: 7px;
+        margin-bottom: 17px;
+        border-radius: 10px;
+        padding: 5px 18px 6px 18px;
+    
     
 
 }
@@ -68,12 +71,20 @@
 }
 .cus-img{
     width: 450px;
-    /* max-height: 70px; */
-    /* max-width: 80px; */
+    
     height: 500px;
 }
+.modal-footer .btn + .btn {
+    background-color: #e33f4e;
+    color: #fff;
+    padding: 7px 14px 7px 9px;
+    margin: 7px -2px 17px 8px;
+    border-radius: 10px;
+}
+
 .custom-default-button{
 
+   
 
 .btn-default {
    color: #46a5a7;
@@ -95,6 +106,12 @@
     color: #f1f1f1;
     border-color: #e7e7e9;
     background-color: #252829;
+}
+.btn, .btn-default {
+    color: #000000;
+    border-color: #e7e7e9;
+    background-color: #e9c4ce;
+    border-radius: 10px;
 }
 }
 
@@ -381,19 +398,32 @@ border-radius: 20px;
     border-radius: 0;
     background-color: #158e89;
   
+  
 }
 .modal-dialog .modal-content .modal-header h4 {
     margin: 0px;
     color: rgb(255 255 255);
     font-size: 17px;
     font-weight: 600;
+  
 }
 .modal-dialog .modal-content .modal-header .close {
     margin-top: -3px;
     opacity: 1;
     color: #ffffff;
     text-shadow: none;
+   
 }
+.modal-dialog .modal-content {
+    border: 1px solid #ced0d3;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    height: 400px;
+    margin-top: 60px;
+ 
+}
+
+
 //  .org-bg-img{
 //      background-image: url(bg-img-org.jpg);
 //      background-position: center;
@@ -539,7 +569,7 @@ border-radius: 20px;
     margin: 0;
     opacity: 1;
     z-index: 102;
-    height: 90vh;
+    height: 120vh;
     top: 20px;
     left: 138px;
     width: auto;

@@ -26790,9 +26790,10 @@ input[type=checkbox].three-state-checkbox + .control-label {
   color: #fff;
   border-color: #04969c;
   background-color: rgb(6, 179, 187);
-  margin-top: 6px;
+  margin-top: 7px;
   margin-bottom: 17px;
   border-radius: 10px;
+  padding: 5px 18px 6px 18px;
 }
 
 .btn-primary:hover {
@@ -26809,9 +26810,15 @@ input[type=checkbox].three-state-checkbox + .control-label {
 
 .cus-img {
   width: 450px;
-  /* max-height: 70px; */
-  /* max-width: 80px; */
   height: 500px;
+}
+
+.modal-footer .btn + .btn {
+  background-color: #e33f4e;
+  color: #fff;
+  padding: 7px 14px 7px 9px;
+  margin: 7px -2px 17px 8px;
+  border-radius: 10px;
 }
 
 .custom-default-button .btn-default {
@@ -26833,6 +26840,12 @@ input[type=checkbox].three-state-checkbox + .control-label {
   color: #f1f1f1;
   border-color: #e7e7e9;
   background-color: #252829;
+}
+.custom-default-button .btn, .custom-default-button .btn-default {
+  color: #000000;
+  border-color: #e7e7e9;
+  background-color: #e9c4ce;
+  border-radius: 10px;
 }
 
 .layout-atlas-topbar {
@@ -27149,6 +27162,14 @@ input[type=checkbox].three-state-checkbox + .control-label {
   text-shadow: none;
 }
 
+.modal-dialog .modal-content {
+  border: 1px solid #ced0d3;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  height: 400px;
+  margin-top: 60px;
+}
+
 .cust-list-view .mx-listview > ul > li {
   transition: all 0.3s 0s cubic-bezier(0.4, 0, 0.2, 1);
   transform-style: initial;
@@ -27282,7 +27303,7 @@ input[type=checkbox].three-state-checkbox + .control-label {
   margin: 0;
   opacity: 1;
   z-index: 102;
-  height: 90vh;
+  height: 120vh;
   top: 20px;
   left: 138px;
   width: auto;
