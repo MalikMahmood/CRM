@@ -45,18 +45,14 @@
 
 }
 }
-.btn-primary{
-    
-        color: #fff;
-        border-color: #04969c;
-        background-color: rgb(6, 179, 187);
-        margin-top: 7px;
-        margin-bottom: 17px;
-        border-radius: 10px;
-        padding: 5px 18px 6px 18px;
-    
-    
-
+.btn-primary {
+    color: #fff;
+    border-color: #04969c;
+    background-color: rgb(6, 179, 187);
+    margin-top: 26px;
+    margin-bottom: 21px;
+    border-radius: 10px;
+    padding: 11px 26px 7px 21px;
 }
 .btn-primary:hover{
     color: #fff;
@@ -77,8 +73,8 @@
 .modal-footer .btn + .btn {
     background-color: #e33f4e;
     color: #fff;
-    padding: 7px 14px 7px 9px;
-    margin: 7px -2px 17px 8px;
+    padding: 7px 20px 7px 16px;
+    margin: 24px -2px 21px 8px;
     border-radius: 10px;
 }
 
@@ -347,7 +343,7 @@ border-radius: 20px;
 }
 .welcome-text{
     color: #000;
-    font-size: 35px;
+    font-size: 29px;
     font-weight: 700;
     font-family: "Lato", sans-serif;
 }
@@ -418,8 +414,7 @@ border-radius: 20px;
     border: 1px solid #ced0d3;
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    height: 400px;
-    margin-top: 60px;
+   
  
 }
 
@@ -645,4 +640,25 @@ border-radius: 20px;
     border-radius: 10px;
     font-size: 15px;
     font-weight:500;
+}
+.alert-danger {
+    color: #88262f;
+    border-color: #9f2c37;
+    background-color: #f9d9dc;
+    margin-top: 16px;
+    padding: 9px;
+}
+.alert {
+    margin-top: 16px;
+    padding: 16px;
+    border: 1px solid;
+    border-radius: 4px;
+    padding: 9px;
+}
+.admin-lan-text1 {
+    font-size: 23px;
+    font-weight: 400;
+    margin-left: -1px;
+    text-align: center;
+    margin-top: 20px;
 }
