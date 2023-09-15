@@ -52,7 +52,7 @@
     margin-top: 26px;
     margin-bottom: 21px;
     border-radius: 10px;
-    padding: 11px 26px 7px 21px;
+    padding: 8px 26px 7px 21px;
 }
 .btn-primary:hover{
     color: #fff;
@@ -207,10 +207,17 @@ color: #ebefff;
 border-color: #e7e7e9;
 background-color: #1ab9bc;
 }
+.layout-atlas .region-topbar .topbar-content {
+    display: flex;
+    align-items: center;
+    min-height: 48px;
+    background-color: #158e89;
+}
 
 .layout-atlas-responsive-topbar .region-topbar {
-    padding: 0 16px;
-    background-color: #46a5a7;
+    margin: -11px -23px -8px -7px;
+    padding: 9px 29p;
+    background-color: #158e89;
 }
 .region-topbar .mx-navbar ul.nav > .mx-navbar-item.active a{
     color: #fff;
@@ -359,13 +366,20 @@ border-radius: 20px;
     text-align: center;
 }
 
-.back-but-org{
-    border-radius: 10px;
-    font-size: 15px;
-    font-weight: 500;
-    background-color: #46a5a7;
-    color: white;
-}
+
+    .back-but-org {
+        border-radius: 10px;
+        font-size: 15px;
+        font-weight: 500;
+        background-color: rgb(70, 165, 167);
+        color: white;
+        padding-bottom: 31px;
+        padding-top: 8px;
+        padding-left: 7px;
+        margin: -2px -1px 9px 4px;
+        width: 82px;
+    }
+   
 .back-but-org:hover{
     color: white;
     border-color: #e7e7e9;
@@ -383,11 +397,11 @@ border-radius: 20px;
     background-color: #a5bcbd;
 }
 
-.mx-groupbox > h4.mx-groupbox-header {
-    font-size: 18px;
-    color: white;
-    background-color: rgb(192 208 208);
-}
+// .mx-groupbox > h4.mx-groupbox-header {
+//     font-size: 11px;
+//     color: white;
+//     background-color: rgb(192 208 208);
+// }
 .modal-dialog .modal-content .modal-header {
     padding: 9px;
     border-bottom-color: #ced0d3;
@@ -509,10 +523,11 @@ border-radius: 20px;
     padding: 12px 16px;
 }
 .mx-groupbox > h4.mx-groupbox-header {
-    font-size: 18px;
+    font-size: 15px;
     color: #0d0d0d;
     /* background-color: rgb(192, 208, 208); */
     background-color: #b8ebea;
+    padding: 2px;
 }
 /* // .mx-groupbox > .mx-groupbox-header {
 //     margin: 0;
