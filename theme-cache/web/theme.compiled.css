@@ -26790,9 +26790,10 @@ input[type=checkbox].three-state-checkbox + .control-label {
   color: #fff;
   border-color: #04969c;
   background-color: rgb(6, 179, 187);
-  margin-top: 6px;
-  margin-bottom: 17px;
+  margin-top: 26px;
+  margin-bottom: 21px;
   border-radius: 10px;
+  padding: 11px 26px 7px 21px;
 }
 
 .btn-primary:hover {
@@ -26809,9 +26810,15 @@ input[type=checkbox].three-state-checkbox + .control-label {
 
 .cus-img {
   width: 450px;
-  /* max-height: 70px; */
-  /* max-width: 80px; */
   height: 500px;
+}
+
+.modal-footer .btn + .btn {
+  background-color: #e33f4e;
+  color: #fff;
+  padding: 7px 20px 7px 16px;
+  margin: 24px -2px 21px 8px;
+  border-radius: 10px;
 }
 
 .custom-default-button .btn-default {
@@ -26833,6 +26840,12 @@ input[type=checkbox].three-state-checkbox + .control-label {
   color: #f1f1f1;
   border-color: #e7e7e9;
   background-color: #252829;
+}
+.custom-default-button .btn, .custom-default-button .btn-default {
+  color: #000000;
+  border-color: #e7e7e9;
+  background-color: #e9c4ce;
+  border-radius: 10px;
 }
 
 .layout-atlas-topbar {
@@ -27078,7 +27091,7 @@ input[type=checkbox].three-state-checkbox + .control-label {
 
 .welcome-text {
   color: #000;
-  font-size: 35px;
+  font-size: 29px;
   font-weight: 700;
   font-family: "Lato", sans-serif;
 }
@@ -27147,6 +27160,12 @@ input[type=checkbox].three-state-checkbox + .control-label {
   opacity: 1;
   color: #ffffff;
   text-shadow: none;
+}
+
+.modal-dialog .modal-content {
+  border: 1px solid #ced0d3;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .cust-list-view .mx-listview > ul > li {
@@ -27273,16 +27292,6 @@ input[type=checkbox].three-state-checkbox + .control-label {
   background: #d2ded7;
 }
 
-/* // .custom-editpage.con{
-//     width: 1086px;
-//     height: 281px;
-//     position: relative;
-//     top: -293.9938px;
-//     opacity: 1;
-//     z-index: 102;
-//     left: 43.0109px;
-
-// } */
 .mx-window {
   position: fixed;
   left: auto;
@@ -27292,7 +27301,7 @@ input[type=checkbox].three-state-checkbox + .control-label {
   margin: 0;
   opacity: 1;
   z-index: 102;
-  height: 90vh;
+  height: 120vh;
   top: 20px;
   left: 138px;
   width: auto;
@@ -27359,9 +27368,6 @@ input[type=checkbox].three-state-checkbox + .control-label {
 }
 
 .mx-navigationtree .navbar-inner > ul > li > a img {
-  width: 20px;
-  height: auto;
-  margin-right: 0.5em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27379,6 +27385,30 @@ input[type=checkbox].three-state-checkbox + .control-label {
   font-weight: 500;
 }
 
+.alert-danger {
+  color: #88262f;
+  border-color: #9f2c37;
+  background-color: #f9d9dc;
+  margin-top: 16px;
+  padding: 9px;
+}
+
+.alert {
+  margin-top: 16px;
+  padding: 16px;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 9px;
+}
+
+.admin-lan-text1 {
+  font-size: 23px;
+  font-weight: 400;
+  margin-left: -1px;
+  text-align: center;
+  margin-top: 20px;
+}
+
 .custom-admin-bg-img {
   background-color: #eafafa;
   background-repeat: no-repeat;
@@ -27393,7 +27423,7 @@ input[type=checkbox].three-state-checkbox + .control-label {
   justify-content: center;
   align-items: center;
   border-radius: 12px;
-  width: 230px;
+  width: 239px;
   padding: 0px;
   height: 200px;
   background-color: #fff;
