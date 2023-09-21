@@ -27947,6 +27947,16 @@ input[type=checkbox].three-state-checkbox + .control-label {
   border: none;
 }
 
+.swiper-button-next:after, .swiper-button-prev:after {
+  font-family: swiper-icons;
+  font-size: var(--swiper-navigation-size);
+  font-variant: normal;
+  letter-spacing: 0;
+  line-height: 1;
+  text-transform: none !important;
+  display: none;
+}
+
 .custom-admin-bg-img {
   background-color: #eafafa;
   background-repeat: no-repeat;
