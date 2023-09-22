@@ -597,6 +597,10 @@ border-radius: 20px;
     text-align: center;
     margin-top: 20px;
 }
+.glyphicon-menu-hamburger:before {
+    content: "\e236";
+    color: white;
+}
 .mx-groupbox > h6.mx-groupbox-header{
     font-size: 12px;
     padding: 7px;
