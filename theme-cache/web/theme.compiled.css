@@ -27933,6 +27933,11 @@ input[type=checkbox].three-state-checkbox + .control-label {
   margin-top: 20px;
 }
 
+.mx-groupbox > h6.mx-groupbox-header {
+  font-size: 12px;
+  padding: 7px;
+}
+
 .mx-grid-controlbar .mx-button, .mx-grid-search-controls .mx-button {
   color: white;
   background: #d3b2e0;
@@ -27945,6 +27950,16 @@ input[type=checkbox].three-state-checkbox + .control-label {
   border-radius: 10px;
   background-color: #adafdb;
   border: none;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+  font-family: swiper-icons;
+  font-size: var(--swiper-navigation-size);
+  font-variant: normal;
+  letter-spacing: 0;
+  line-height: 1;
+  text-transform: none !important;
+  display: none;
 }
 
 .custom-admin-bg-img {

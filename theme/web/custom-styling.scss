@@ -597,6 +597,10 @@ border-radius: 20px;
     text-align: center;
     margin-top: 20px;
 }
+.mx-groupbox > h6.mx-groupbox-header{
+    font-size: 12px;
+    padding: 7px;
+}
 .mx-grid-controlbar .mx-button, .mx-grid-search-controls .mx-button {
     color: white;
     background: #d3b2e0;
@@ -608,6 +612,16 @@ margin-right: 10px;
 border-radius:10px;
 background-color: #adafdb;
 border:none;
+}
+.swiper-button-next:after, .swiper-button-prev:after {
+    font-family: swiper-icons;
+    font-size: var(--swiper-navigation-size);
+    font-variant: normal;
+    letter-spacing: 0;
+    line-height: 1;
+    text-transform: none!important;
+    display: none;
+    
 }
 
 
