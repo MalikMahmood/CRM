@@ -27417,16 +27417,6 @@ input[type=checkbox].three-state-checkbox + .control-label {
   font-size: 20px;
   border-radius: 25px;
 }
-.custom-default-button .btn-default:hover {
-  color: #f6f6f6;
-  border-color: #e7e7e9;
-  background-color: #1e2424;
-}
-.custom-default-button .btn-default:focus {
-  color: #f1f1f1;
-  border-color: #e7e7e9;
-  background-color: #252829;
-}
 .custom-default-button .btn, .custom-default-button .btn-default {
   color: #000000;
   border-color: #e7e7e9;
@@ -27945,7 +27935,6 @@ input[type=checkbox].three-state-checkbox + .control-label {
 
 .mx-grid-controlbar .mx-button, .mx-grid-search-controls .mx-button {
   color: white;
-  background: #d3b2e0;
   margin-bottom: 8px;
   border-radius: 10px;
 }
@@ -27965,6 +27954,131 @@ input[type=checkbox].three-state-checkbox + .control-label {
   line-height: 1;
   text-transform: none !important;
   display: none;
+}
+
+.new-button {
+  border-radius: 10px;
+  border: 2px solid rgb(21, 142, 137);
+  background: white;
+  color: rgb(21, 142, 137);
+  padding: 7px 20px 8px 20px;
+}
+
+.new-button :active {
+  background: #158e89;
+  color: white;
+  border: none;
+}
+
+.new-button:hover {
+  background: #158e89;
+  color: white;
+  border: none;
+}
+
+.delete-button {
+  border-radius: 10px;
+  background: rgb(255, 255, 255);
+  border: 2px solid #c43c3c;
+  padding: 7px 20px 8px 20px;
+  color: #c43c3c;
+}
+
+.delete-button:hover {
+  background: #df522c;
+  border: none;
+  color: white;
+}
+
+.delete-button:active {
+  background: #df522c;
+  border: none;
+  color: white;
+}
+
+.edit-btn {
+  border-radius: 10px;
+  background: rgb(0, 216, 207);
+  border: none;
+}
+
+.in {
+  border-radius: 10px;
+  /* background: rgb(165, 168, 101); */
+  border: 2px solid #158e89;
+  background: white;
+  color: #158e89;
+}
+
+.mx-grid-controlbar .mx-button, .mx-grid-search-controls .mx-button {
+  color: #0f0f0f;
+  margin-bottom: 8px;
+  border-radius: 10px;
+}
+
+.button-btn {
+  border: 2px solid #7bdad7;
+  border-radius: 10px;
+  padding: 7px 20px 8px 20px;
+}
+
+.button-btn:active {
+  background: #00d0bb;
+  color: white;
+  border: none;
+}
+
+.button-btn:hover {
+  background: #00d0bb;
+  color: white;
+  border: none;
+}
+
+.web-button {
+  border-radius: 10px;
+  background: rgb(252, 252, 252);
+  border: 2px solid #79acc8;
+  padding: 7px 20px 8px 20px;
+}
+
+.web-button:active {
+  background: #49a2af;
+  border: none;
+  color: white;
+}
+
+.web-button:hover {
+  background: #49a2af;
+  border: none;
+  color: white;
+}
+
+.btn-edit {
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+  border: 2px solid #7aaa95;
+  width: 65px;
+  padding: 7px 20px 8px 20px;
+}
+
+.btn-edit:hover {
+  background: #5ec4c4;
+  border: none;
+  color: white;
+}
+
+.btn-edit:active {
+  background: #5ec4c4;
+  border: none;
+  color: white;
+}
+
+.back-btn {
+  border: 2px solid grey;
+  background: white;
+  color: blue;
+  border-radius: 10px;
+  padding: 7px 20px 8px 20px;
 }
 
 .custom-admin-bg-img {
