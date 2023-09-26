@@ -27983,14 +27983,6 @@ input[type=checkbox].three-state-checkbox + .control-label {
   transition-duration: 0ms;
 }
 
-.delete-button {
-  border-radius: 10px;
-  background: rgb(255, 255, 255);
-  border: 2px solid #c43c3c;
-  padding: 7px 20px 8px 20px;
-  color: #c43c3c;
-}
-
 .delete-button:hover {
   background: #df522c;
   border: none;
