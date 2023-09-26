@@ -9,21 +9,9 @@
 
 package oidc.actions;
 
-import java.util.ArrayList;
-import java.util.Base64;
-import java.util.List;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-import com.auth0.jwt.JWT;
-import com.auth0.jwt.interfaces.DecodedJWT;
-import com.mendix.core.Core;
-import com.mendix.logging.ILogNode;
 import com.mendix.systemwideinterfaces.core.IContext;
-import com.mendix.systemwideinterfaces.core.IMendixObject;
 import com.mendix.webui.CustomJavaAction;
-import oidc.proxies.Role;
-import system.proxies.UserRole;
+import com.mendix.systemwideinterfaces.core.IMendixObject;
 
 public class AzureRoleParse extends CustomJavaAction<java.util.List<IMendixObject>>
 {
@@ -39,14 +27,7 @@ public class AzureRoleParse extends CustomJavaAction<java.util.List<IMendixObjec
 	public java.util.List<IMendixObject> executeAction() throws Exception
 	{
 		// BEGIN USER CODE
-		String decodedPayload = getDecodedPayload();
-		JSONArray roles=getRoles(decodedPayload);
-		if (roles != null) {
-			IContext context=getContext();
-			List<IMendixObject> rolesFromToken=getRoleObjects(roles,context);
-			return rolesFromToken;
-		}
-		return null;
+		throw new com.mendix.systemwideinterfaces.MendixRuntimeException("Java action was not implemented");
 		// END USER CODE
 	}
 
@@ -61,33 +42,5 @@ public class AzureRoleParse extends CustomJavaAction<java.util.List<IMendixObjec
 	}
 
 	// BEGIN EXTRA CODE
-	private java.lang.String description="Parsed from access Token";
-	private static final ILogNode logger=Core.getLogger("OIDC.LogNode");
-	public java.lang.String getDecodedPayload(){
-		DecodedJWT jwt=JWT.decode(AccessToken);
-		String payload= jwt.getPayload();
-		byte[] decodedBytes = Base64.getDecoder().decode(payload);
-		String decodedPayload = new String(decodedBytes);
-		return decodedPayload;
-	}
-	
-	public JSONArray getRoles(String payload) throws JSONException {
-		JSONObject jsonPayload=  new JSONObject(payload);
-		JSONArray roles = (jsonPayload.has("roles")) ? jsonPayload.getJSONArray("roles") : null;
-		logger.info(roles);
-		return roles;
-	}
-	
-	public List<IMendixObject> getRoleObjects(JSONArray roles, IContext context) throws JSONException{
-		List<IMendixObject> rolesFromToken=new ArrayList<IMendixObject>();
-		for(int i=0;i<roles.length();i++) {
-			String role=roles.get(i).toString();
-			logger.info(role);
-			Role urole = new Role(context);
-    		urole.setRoleName(role);
-    		rolesFromToken.add(urole.getMendixObject());
-		}
-		return rolesFromToken;
-	}
 	// END EXTRA CODE
 }

@@ -11,9 +11,6 @@ package oidc.actions;
 
 import com.mendix.systemwideinterfaces.core.IContext;
 import com.mendix.webui.CustomJavaAction;
-import java.util.HashMap;
-import java.util.Map;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class GetIssuerFromToken extends CustomJavaAction<java.lang.String>
 {
@@ -29,8 +26,7 @@ public class GetIssuerFromToken extends CustomJavaAction<java.lang.String>
 	public java.lang.String executeAction() throws Exception
 	{
 		// BEGIN USER CODE
-		HashMap<String, String> readValue = new ObjectMapper().readValue(DecodedAccesstoken, HashMap.class);
-		return readValue.get("iss");
+		throw new com.mendix.systemwideinterfaces.MendixRuntimeException("Java action was not implemented");
 		// END USER CODE
 	}
 

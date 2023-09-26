@@ -16,10 +16,6 @@ import { Big } from "big.js";
  */
 export async function Reload() {
 	// BEGIN USER CODE
-    mx.reload();
-    return new Promise(() => {
-        // Never resolve this pormise to ensure that the next action in the nanoflow (if any)
-        // will not be executed before the actual reload is happended.
-    });
+	throw new Error("JavaScript action was not implemented");
 	// END USER CODE
 }
