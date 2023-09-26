@@ -645,7 +645,12 @@ border:none;
     border: none;
 
 }
-
+.img-coursel{
+    width: 536px;
+    opacity: 0;
+    transform: translate3d(-40px, 0px, 0px);
+    transition-duration: 0ms;
+}
 
 
 
@@ -685,12 +690,45 @@ border:none;
     color: #0f0f0f;
     margin-bottom: 8px;
     border-radius: 10px;
+  
+}
+.import-btn{
+    border-radius: 10px;
+    background: rgb(255 255 255);
+    border: 2px solid #9dc9b7;
+}
+.import-btn:active{
+    background: #afdcdd;
+    border: none;
+    color: white;
+}
+.import-btn:hover{
+    background: #afdcdd;
+    border: none;
+    color: white;
+    
+}
+.duplicate{
+    background: rgb(249 249 247);
+    border: 2px solid #37767e;
+    border-radius: 10px;
+}
+.duplicate:hover{
+    background: rgb(111 173 188);
+    color: white;
+    border: none;
+}
+.duplicate:active{
+    background: rgb(111 173 188);
+    color: white;
+    border: none;
 }
 
 .button-btn{
     border: 2px solid #7bdad7;
     border-radius: 10px;
     padding: 7px 20px 8px 20px;
+    color: #706c6c;
 }
 .button-btn:active{
 background: #00d0bb;
@@ -738,7 +776,7 @@ background: #00d0bb;
 .back-btn{
     border: 2px solid grey;
     background: white;
-    color: blue;
+    color: #706c6c;
     border-radius: 10px;
     padding: 7px 20px 8px 20px;
 }
