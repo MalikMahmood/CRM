@@ -9,8 +9,6 @@
 
 package oidc.actions;
 
-import java.util.HashMap;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mendix.systemwideinterfaces.core.IContext;
 import com.mendix.webui.CustomJavaAction;
 
@@ -28,9 +26,7 @@ public class GetScopeFromToken extends CustomJavaAction<java.lang.String>
 	public java.lang.String executeAction() throws Exception
 	{
 		// BEGIN USER CODE
-		//throw new com.mendix.systemwideinterfaces.MendixRuntimeException("Java action was not implemented");
-		HashMap<String, String> readValue = new ObjectMapper().readValue(DecodedJWT, HashMap.class);
-		return readValue.get("scope");
+		throw new com.mendix.systemwideinterfaces.MendixRuntimeException("Java action was not implemented");
 		// END USER CODE
 	}
 

@@ -19,32 +19,6 @@ import { Big } from "big.js";
  */
 export async function TimeBetween(startDate, endDate, unitOfTime) {
 	// BEGIN USER CODE
-    if (startDate == null) {
-        throw new Error("Required field: startDate");
-    }
-    if (endDate == null) {
-        throw new Error("Required field: endDate");
-    }
-    if (unitOfTime == null) {
-        throw new Error("Required field: unitOfTime");
-    }
-    const difference = endDate.getTime() - startDate.getTime();
-    function getDiff(difference, unit) {
-        switch (unit) {
-            case "MILLISECOND":
-                return difference;
-            case "SECOND":
-                return difference / 1000;
-            case "MINUTE":
-                return difference / 60000;
-            case "HOUR":
-                return difference / 3600000;
-            case "DAY":
-                return difference / 86400000;
-            default:
-                throw new Error("Unit of time not supported: " + unit);
-        }
-    }
-    return new Big(getDiff(difference, unitOfTime));
+	throw new Error("JavaScript action was not implemented");
 	// END USER CODE
 }

@@ -9,9 +9,6 @@
 
 package oidc.actions;
 
-import communitycommons.StringUtils;
-import java.security.MessageDigest;
-import java.util.Base64;
 import com.mendix.systemwideinterfaces.core.IContext;
 import com.mendix.webui.CustomJavaAction;
 
@@ -37,11 +34,7 @@ public class GetCodeChallenge extends CustomJavaAction<java.lang.String>
 	public java.lang.String executeAction() throws Exception
 	{
 		// BEGIN USER CODE
-		byte[] bytes = codeVerifier.getBytes("US-ASCII");
-	    MessageDigest messageDigest = MessageDigest.getInstance("SHA-256");
-	    messageDigest.update(bytes, 0, bytes.length);
-	    byte[] digest = messageDigest.digest();
-	    return Base64.getUrlEncoder().withoutPadding().encodeToString(digest);
+		throw new com.mendix.systemwideinterfaces.MendixRuntimeException("Java action was not implemented");
 		// END USER CODE
 	}
 

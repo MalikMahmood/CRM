@@ -9,8 +9,6 @@
 
 package oidc.actions;
 
-import java.util.List;
-import com.mendix.core.Core;
 import com.mendix.systemwideinterfaces.core.IContext;
 import com.mendix.webui.CustomJavaAction;
 import com.mendix.systemwideinterfaces.core.IMendixObject;
@@ -31,16 +29,7 @@ public class CallCustomMicroflow extends CustomJavaAction<java.util.List<IMendix
 	public java.util.List<IMendixObject> executeAction() throws Exception
 	{
 		// BEGIN USER CODE
-		IContext context=getContext();
-		List<IMendixObject> rolesFromToken = Core.microflowCall(Microflow)
-    	.withParam("AccessToken", AccessToken)
-    	.execute(context);
-		
-//		IContext context=getContext();
-//		List<IMendixObject> rolesFromToken = Core.microflowCall(Microflow)
-//				.withParam("AccessToken", AccessToken).execute(context);
-		return rolesFromToken;
-		//throw new com.mendix.systemwideinterfaces.MendixRuntimeException("Java action was not implemented");
+		throw new com.mendix.systemwideinterfaces.MendixRuntimeException("Java action was not implemented");
 		// END USER CODE
 	}
 
