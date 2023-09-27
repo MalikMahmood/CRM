@@ -27373,25 +27373,24 @@ input[type=checkbox].three-state-checkbox + .control-label {
 }
 
 .btn-primary {
-  color: #fff;
-  border-color: #04969c;
-  background-color: rgb(6, 179, 187);
-  margin-top: 26px;
-  margin-bottom: 21px;
+  color: #969292;
+  border: 2px solid #1e9ca2;
+  background-color: rgb(251, 251, 251);
+  margin: 27px 11px 21px 11px;
   border-radius: 10px;
-  padding: 8px 26px 7px 21px;
+  padding: 8px 25px 8px 22px;
 }
 
 .btn-primary:hover {
   color: #fff;
-  border-color: #42c2c8;
-  background-color: #0aabb3;
+  border: none;
+  background: #2fc0c4;
 }
 
-.btn-primary:focus {
+.btn-primary:active {
   color: #fff;
-  border-color: #48b1d2;
-  background-color: #0e92bb;
+  border: none;
+  background: #2fc0c4;
 }
 
 .cus-img {
@@ -27400,28 +27399,11 @@ input[type=checkbox].three-state-checkbox + .control-label {
 }
 
 .modal-footer .btn + .btn {
-  background-color: #e33f4e;
-  color: #fff;
-  padding: 7px 20px 7px 16px;
-  margin: 24px -2px 21px 8px;
+  margin: 28px 2px 21px 4px;
+  padding: 5px 17px 2px 12px;
   border-radius: 10px;
-}
-
-.custom-default-button .btn-default {
-  color: #46a5a7;
-  border-color: rgba(116, 171, 172, 0.7607843137);
-  background-color: #ffffff;
-  width: 175px;
-  height: 80px;
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 25px;
-}
-.custom-default-button .btn, .custom-default-button .btn-default {
-  color: #000000;
-  border-color: #e7e7e9;
-  background-color: #e9c4ce;
-  border-radius: 10px;
+  border: 2px solid #df4949;
+  color: grey;
 }
 
 .layout-atlas-topbar {
@@ -27540,6 +27522,15 @@ input[type=checkbox].three-state-checkbox + .control-label {
   margin-bottom: 8px;
 }
 
+.mx-progress-indicator {
+  height: 84px;
+  width: 83px;
+  background-repeat: no-repeat;
+  background-size: 85px;
+  margin: 0 auto;
+  background: url("gif.png");
+}
+
 .btn-lg img {
   height: 28px;
 }
@@ -27547,6 +27538,11 @@ input[type=checkbox].three-state-checkbox + .control-label {
 .region-topbar .mx-navbar {
   background-color: #158e89;
   min-height: auto;
+}
+
+.mx-icon-filled.mx-icon-navigation-menu::before {
+  content: "\e9ed";
+  color: white;
 }
 
 .button {
@@ -27934,7 +27930,6 @@ input[type=checkbox].three-state-checkbox + .control-label {
 }
 
 .mx-grid-controlbar .mx-button, .mx-grid-search-controls .mx-button {
-  color: white;
   margin-bottom: 8px;
   border-radius: 10px;
 }
@@ -27983,6 +27978,14 @@ input[type=checkbox].three-state-checkbox + .control-label {
   transition-duration: 0ms;
 }
 
+.delete-button {
+  border: 2px solid #eb4a4a;
+  background: white;
+  padding: 7px 20px 8px 20px;
+  border-radius: 10px;
+  color: #706c6c;
+}
+
 .delete-button:hover {
   background: #df522c;
   border: none;
@@ -27995,30 +27998,11 @@ input[type=checkbox].three-state-checkbox + .control-label {
   color: white;
 }
 
-.edit-btn {
-  border-radius: 10px;
-  background: rgb(0, 216, 207);
-  border: none;
-}
-
-.in {
-  border-radius: 10px;
-  /* background: rgb(165, 168, 101); */
-  border: 2px solid #158e89;
-  background: white;
-  color: #158e89;
-}
-
-.mx-grid-controlbar .mx-button, .mx-grid-search-controls .mx-button {
-  color: #0f0f0f;
-  margin-bottom: 8px;
-  border-radius: 10px;
-}
-
 .import-btn {
   border-radius: 10px;
   background: rgb(255, 255, 255);
   border: 2px solid #9dc9b7;
+  color: #706c6c;
 }
 
 .import-btn:active {
@@ -28037,6 +28021,7 @@ input[type=checkbox].three-state-checkbox + .control-label {
   background: rgb(249, 249, 247);
   border: 2px solid #37767e;
   border-radius: 10px;
+  color: #706c6c;
 }
 
 .duplicate:hover {
@@ -28075,6 +28060,7 @@ input[type=checkbox].three-state-checkbox + .control-label {
   background: rgb(252, 252, 252);
   border: 2px solid #79acc8;
   padding: 7px 20px 8px 20px;
+  color: #706c6c;
 }
 
 .web-button:active {
@@ -28095,16 +28081,17 @@ input[type=checkbox].three-state-checkbox + .control-label {
   border: 2px solid #7aaa95;
   width: 65px;
   padding: 7px 20px 8px 20px;
+  color: #706c6c;
 }
 
 .btn-edit:hover {
-  background: #5ec4c4;
+  background: #67bc83;
   border: none;
   color: white;
 }
 
 .btn-edit:active {
-  background: #5ec4c4;
+  background: #67bc83;
   border: none;
   color: white;
 }
