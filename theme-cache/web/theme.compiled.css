@@ -27709,30 +27709,6 @@ input[type=checkbox].three-state-checkbox + .control-label {
   border-radius: 10px;
 }
 
-.lead-but {
-  width: 84px;
-  height: 38px;
-  border-radius: 3px;
-  padding-top: 6px;
-  padding-left: 12px;
-  font-size: 15px;
-  font-weight: 500;
-  background-color: #8ad3d4;
-  color: white;
-}
-
-.lead-but:hover {
-  color: rgb(246, 246, 246);
-  border-color: rgb(231, 231, 233);
-  background-color: rgb(141, 171, 171);
-}
-
-.lead-but:focus {
-  color: #f1f1f1;
-  border-color: #e7e7e9;
-  background-color: #94d2e6;
-}
-
 .contact-but {
   height: 38px;
   border-radius: 3px;
