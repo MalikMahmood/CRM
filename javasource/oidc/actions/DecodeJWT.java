@@ -9,9 +9,11 @@
 
 package oidc.actions;
 
+import com.auth0.jwt.JWT;
+import com.auth0.jwt.interfaces.DecodedJWT;
 import com.mendix.systemwideinterfaces.core.IContext;
-import com.mendix.webui.CustomJavaAction;
 import com.mendix.systemwideinterfaces.core.IMendixObject;
+import com.mendix.webui.CustomJavaAction;
 
 /**
  * Decodes a JWT string into a plain text JSON for the header and payload. This enables the user to implement a specific JSON mapping that decodes the header or payload. Throws an exception when the token could not be decoded or verified.
@@ -30,7 +32,16 @@ public class DecodeJWT extends CustomJavaAction<IMendixObject>
 	public IMendixObject executeAction() throws Exception
 	{
 		// BEGIN USER CODE
-		throw new com.mendix.systemwideinterfaces.MendixRuntimeException("Java action was not implemented");
+		DecodedJWT jwt = JWT.decode(encodedJWT);
+		oidc.proxies.JWT mxJWT = new oidc.proxies.JWT(getContext());
+		mxJWT.setexp(jwt.getExpiresAt());
+		mxJWT.setiat(jwt.getIssuedAt());
+		mxJWT.setiss(jwt.getIssuer());
+		mxJWT.setjti(jwt.getId());
+		mxJWT.setkid(jwt.getKeyId());
+		mxJWT.setnbf(jwt.getNotBefore());
+		mxJWT.setsub(jwt.getSubject());
+		return mxJWT.getMendixObject();
 		// END USER CODE
 	}
 

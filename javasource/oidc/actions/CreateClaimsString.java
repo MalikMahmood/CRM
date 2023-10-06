@@ -11,7 +11,9 @@ package oidc.actions;
 
 import com.mendix.systemwideinterfaces.core.IContext;
 import com.mendix.webui.CustomJavaAction;
+import oidc.proxies.Claim;
 import com.mendix.systemwideinterfaces.core.IMendixObject;
+import com.mendix.thirdparty.org.json.JSONObject;
 
 public class CreateClaimsString extends CustomJavaAction<java.lang.String>
 {
@@ -34,7 +36,13 @@ public class CreateClaimsString extends CustomJavaAction<java.lang.String>
 			.collect(java.util.stream.Collectors.toList());
 
 		// BEGIN USER CODE
-		throw new com.mendix.systemwideinterfaces.MendixRuntimeException("Java action was not implemented");
+		JSONObject result = new JSONObject();
+		JSONObject userinfo = new JSONObject();
+		for (Claim claim : claimsList) {
+			userinfo.put(claim.getValue(), JSONObject.NULL);
+		}
+		result.put("userinfo", userinfo);
+		return result.toString();
 		// END USER CODE
 	}
 

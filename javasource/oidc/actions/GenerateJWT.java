@@ -9,9 +9,20 @@
 
 package oidc.actions;
 
+import java.security.interfaces.RSAPrivateKey;
+import java.security.interfaces.RSAPublicKey;
+import java.util.List;
+import com.auth0.jwt.JWT;
+import com.auth0.jwt.JWTCreator.Builder;
+import com.auth0.jwt.algorithms.Algorithm;
+import com.mendix.core.Core;
+import com.mendix.core.CoreException;
 import com.mendix.systemwideinterfaces.core.IContext;
-import com.mendix.webui.CustomJavaAction;
 import com.mendix.systemwideinterfaces.core.IMendixObject;
+import com.mendix.webui.CustomJavaAction;
+import com.nimbusds.jose.jwk.JWK;
+import com.nimbusds.jose.jwk.RSAKey;
+import oidc.proxies.Audience;
 
 public class GenerateJWT extends CustomJavaAction<java.lang.String>
 {
@@ -36,7 +47,61 @@ public class GenerateJWT extends CustomJavaAction<java.lang.String>
 		this.jwt = this.__jwt == null ? null : oidc.proxies.JWT.initialize(getContext(), __jwt);
 
 		// BEGIN USER CODE
-		throw new com.mendix.systemwideinterfaces.MendixRuntimeException("Java action was not implemented");
+		JWK jwkObj = JWK.parse(jwk);
+		Algorithm alg;
+		
+		RSAPublicKey pubKey = null;
+		RSAPrivateKey privKey = null;
+		
+		if (jwkObj instanceof RSAKey) {
+			pubKey = ((RSAKey) jwkObj).toRSAPublicKey();
+			privKey = ((RSAKey) jwkObj).toRSAPrivateKey();
+		}
+		
+		switch (algorithm) {
+		case HS256:
+			alg = Algorithm.HMAC256(secret);
+			break;
+		case HS384:
+			alg = Algorithm.HMAC384(secret);
+			break;
+		case HS512:
+			alg = Algorithm.HMAC512(secret);
+			break;
+		case RS256:
+			alg = Algorithm.RSA256(pubKey, privKey);
+			break;
+		case RS384:
+			alg = Algorithm.RSA384(pubKey, privKey);
+			break;
+		case RS512:
+			alg = Algorithm.RSA512(pubKey, privKey);
+			break;
+		default:
+			throw new CoreException("Unknown algorithm: " + algorithm);
+		}
+		
+		List<IMendixObject> audiences = Core.retrieveByPath(context(), 
+				jwt.getMendixObject(), oidc.proxies.Audience.MemberNames.Audience_JWT.toString());
+		
+		String[] auds = new String[audiences.size()];
+		{
+			int i = 0;
+			for (IMendixObject audienceObj : audiences) {
+				Audience aud = Audience.initialize(getContext(), audienceObj);
+				auds[i] = aud.getaud();
+				i++;
+			}
+		}
+		
+		Builder builder = JWT.create();
+		if (jwt.getexp() != null) builder.withExpiresAt(jwt.getexp());
+		if (jwt.getiss() != null && !jwt.getiss().isBlank()) builder.withIssuer(jwt.getiss());
+		if (jwt.getjti() != null && !jwt.getjti().isBlank()) builder.withJWTId(jwt.getjti());
+		if (jwt.getkid() != null && !jwt.getkid().isBlank()) builder.withKeyId(jwt.getkid());
+		if (jwt.getsub() != null && !jwt.getsub().isBlank()) builder.withSubject(jwt.getsub());
+		if (auds.length > 0) builder.withAudience(auds); 
+		return builder.sign(alg);
 		// END USER CODE
 	}
 

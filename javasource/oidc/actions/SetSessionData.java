@@ -9,8 +9,14 @@
 
 package oidc.actions;
 
+import java.lang.reflect.Method;
+import com.mendix.core.Core;
+import com.mendix.core.conf.RuntimeVersion;
+import com.mendix.m2ee.api.IMxRuntimeResponse;
 import com.mendix.systemwideinterfaces.core.IContext;
 import com.mendix.webui.CustomJavaAction;
+import com.mendix.systemwideinterfaces.core.ISession;
+import com.mendix.systemwideinterfaces.core.IUser;
 
 public class SetSessionData extends CustomJavaAction<java.lang.Boolean>
 {
@@ -26,7 +32,21 @@ public class SetSessionData extends CustomJavaAction<java.lang.Boolean>
 	public java.lang.Boolean executeAction() throws Exception
 	{
 		// BEGIN USER CODE
-		throw new com.mendix.systemwideinterfaces.MendixRuntimeException("Java action was not implemented");
+		IContext ctx = getContext();
+		IUser user = Core.getUser(ctx, this.Username);
+		if (user != null) {
+			ISession session = Core.initializeSession(user, null);
+			// get the response object
+			if (ctx.getRuntimeResponse().isPresent()) {
+				IMxRuntimeResponse res = ctx.getRuntimeResponse().get();
+				setCookies(res, session); // set xassessionid and xasid cookies
+				return true;
+			}
+
+		}
+
+		return false;
+
 		// END USER CODE
 	}
 
@@ -41,5 +61,17 @@ public class SetSessionData extends CustomJavaAction<java.lang.Boolean>
 	}
 
 	// BEGIN EXTRA CODE
+	private void setCookies(IMxRuntimeResponse response, ISession session) throws Exception {
+		String[] mxVersion = RuntimeVersion.getInstance().toString().split("\\.");
+		if (Integer.parseInt(mxVersion[0]) >=9 && Integer.parseInt(mxVersion[1]) >= 20) {
+			//use reflection to call the addCookie method with 7 parameters, which was added in 9.20	
+			@SuppressWarnings("rawtypes")
+			Class[] methodSignature = {String.class, String.class, String.class, String.class, int.class, boolean.class, boolean.class};
+			Method addCookie = response.getClass().getMethod("addCookie", methodSignature);
+			addCookie.invoke(response, Core.getConfiguration().getSessionIdCookieName(), session.getId().toString(), "/", "", -1, true, true);
+		} else {
+			response.addCookie(Core.getConfiguration().getSessionIdCookieName(), session.getId().toString(), "/", "", -1, true);
+		}
+	}
 	// END EXTRA CODE
 }

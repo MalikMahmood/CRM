@@ -9,6 +9,9 @@
 
 package oidc.actions;
 
+import java.util.Base64;
+import com.auth0.jwt.JWT;
+import com.auth0.jwt.interfaces.DecodedJWT;
 import com.mendix.systemwideinterfaces.core.IContext;
 import com.mendix.webui.CustomJavaAction;
 
@@ -29,7 +32,8 @@ public class DecodeJWTPlainText extends CustomJavaAction<java.lang.String>
 	public java.lang.String executeAction() throws Exception
 	{
 		// BEGIN USER CODE
-		throw new com.mendix.systemwideinterfaces.MendixRuntimeException("Java action was not implemented");
+		DecodedJWT jwt = JWT.decode(encodedJWT);
+		return new String(Base64.getUrlDecoder().decode(jwt.getPayload()));
 		// END USER CODE
 	}
 

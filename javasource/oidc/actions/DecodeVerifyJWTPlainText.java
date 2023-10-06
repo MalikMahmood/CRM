@@ -9,6 +9,17 @@
 
 package oidc.actions;
 
+import java.net.URL;
+import java.security.interfaces.RSAPublicKey;
+import java.util.Base64;
+import com.auth0.jwk.Jwk;
+import com.auth0.jwk.JwkProvider;
+import com.auth0.jwk.UrlJwkProvider;
+import com.auth0.jwt.JWT;
+import com.auth0.jwt.algorithms.Algorithm;
+import com.auth0.jwt.interfaces.DecodedJWT;
+import com.auth0.jwt.interfaces.JWTVerifier;
+import com.auth0.jwt.interfaces.Verification;
 import com.mendix.systemwideinterfaces.core.IContext;
 import com.mendix.webui.CustomJavaAction;
 
@@ -37,7 +48,27 @@ public class DecodeVerifyJWTPlainText extends CustomJavaAction<java.lang.String>
 	public java.lang.String executeAction() throws Exception
 	{
 		// BEGIN USER CODE
-		throw new com.mendix.systemwideinterfaces.MendixRuntimeException("Java action was not implemented");
+		//Get the Key ID from the token
+		DecodedJWT jwt = JWT.decode(encodedJWT);
+		String kid = jwt.getKeyId();
+		
+		//Get the proper public key
+		JwkProvider provider = new UrlJwkProvider(new URL(jwksUri));
+		Jwk jwk = provider.get(kid); 
+		Algorithm algorithm = Algorithm.RSA256((RSAPublicKey) jwk.getPublicKey(), null);		
+		
+		//Verify
+		Verification verification = JWT.require(algorithm)
+	        .withIssuer(issuer);
+	    if (audience != null) {
+	    	verification.withAudience(audience);
+	    }
+		if (leeway != null) {
+			verification.acceptLeeway(leeway);
+		}
+		JWTVerifier verifier = verification.build(); //Reusable verifier instance
+		DecodedJWT jwtv = verifier.verify(encodedJWT);
+		return new String(Base64.getUrlDecoder().decode(jwtv.getPayload()));
 		// END USER CODE
 	}
 

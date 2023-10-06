@@ -16,6 +16,7 @@ import { Big } from "big.js";
  */
 export async function JS_Logout(logoutURL) {
 	// BEGIN USER CODE
-	throw new Error("JavaScript action was not implemented");
+	mx.session.logout();
+   	window.location.href = logoutURL;
 	// END USER CODE
 }

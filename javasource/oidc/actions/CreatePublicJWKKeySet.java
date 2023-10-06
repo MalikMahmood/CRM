@@ -9,8 +9,12 @@
 
 package oidc.actions;
 
+import java.util.LinkedList;
+import java.util.List;
 import com.mendix.systemwideinterfaces.core.IContext;
 import com.mendix.webui.CustomJavaAction;
+import com.nimbusds.jose.jwk.JWK;
+import com.nimbusds.jose.jwk.JWKSet;
 
 public class CreatePublicJWKKeySet extends CustomJavaAction<java.lang.String>
 {
@@ -28,7 +32,14 @@ public class CreatePublicJWKKeySet extends CustomJavaAction<java.lang.String>
 	public java.lang.String executeAction() throws Exception
 	{
 		// BEGIN USER CODE
-		throw new com.mendix.systemwideinterfaces.MendixRuntimeException("Java action was not implemented");
+		List<JWK> jwks = new LinkedList<>();
+		if (signJWK != null && !signJWK.isBlank())
+			jwks.add(JWK.parse(signJWK));
+		if (encryptJWK != null && !encryptJWK.isBlank())
+			jwks.add(JWK.parse(encryptJWK));
+		
+		JWKSet set = new JWKSet(jwks);
+		return set.toPublicJWKSet().toString();
 		// END USER CODE
 	}
 

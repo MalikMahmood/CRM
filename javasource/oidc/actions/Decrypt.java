@@ -11,6 +11,10 @@ package oidc.actions;
 
 import com.mendix.systemwideinterfaces.core.IContext;
 import com.mendix.webui.CustomJavaAction;
+import com.nimbusds.jose.JWEObject;
+import com.nimbusds.jose.crypto.RSADecrypter;
+import com.nimbusds.jose.jwk.JWK;
+import com.nimbusds.jose.jwk.RSAKey;
 
 public class Decrypt extends CustomJavaAction<java.lang.String>
 {
@@ -28,7 +32,16 @@ public class Decrypt extends CustomJavaAction<java.lang.String>
 	public java.lang.String executeAction() throws Exception
 	{
 		// BEGIN USER CODE
-		throw new com.mendix.systemwideinterfaces.MendixRuntimeException("Java action was not implemented");
+		JWK jwkObj = JWK.parse(jwk);
+		JWEObject jwe = JWEObject.parse(data);
+		
+		if (jwkObj instanceof RSAKey) {
+			RSAKey rsaKey = (RSAKey) jwkObj;
+			RSADecrypter decrypter = new RSADecrypter(rsaKey.toRSAPrivateKey());
+			jwe.decrypt(decrypter);
+		}
+		
+		return jwe.getPayload().toString();		
 		// END USER CODE
 	}
 

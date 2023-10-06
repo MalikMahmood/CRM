@@ -12,21 +12,23 @@ package oidc.actions;
 import com.mendix.systemwideinterfaces.core.IContext;
 import com.mendix.webui.CustomJavaAction;
 
-public class GetIssuerFromToken extends CustomJavaAction<java.lang.String>
+public class getUserAgent extends CustomJavaAction<java.lang.String>
 {
-	private java.lang.String DecodedAccesstoken;
-
-	public GetIssuerFromToken(IContext context, java.lang.String DecodedAccesstoken)
+	public getUserAgent(IContext context)
 	{
 		super(context);
-		this.DecodedAccesstoken = DecodedAccesstoken;
 	}
 
 	@java.lang.Override
 	public java.lang.String executeAction() throws Exception
 	{
 		// BEGIN USER CODE
-		throw new com.mendix.systemwideinterfaces.MendixRuntimeException("Java action was not implemented");
+		IContext ctx = getContext();
+		String userAgent = "";
+		if (ctx.getRuntimeRequest().isPresent()){
+			userAgent = ctx.getRuntimeRequest().get().getHeader("user-agent");
+		}
+		return userAgent;
 		// END USER CODE
 	}
 
@@ -37,7 +39,7 @@ public class GetIssuerFromToken extends CustomJavaAction<java.lang.String>
 	@java.lang.Override
 	public java.lang.String toString()
 	{
-		return "GetIssuerFromToken";
+		return "getUserAgent";
 	}
 
 	// BEGIN EXTRA CODE
