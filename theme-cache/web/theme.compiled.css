@@ -26739,6 +26739,28 @@ input[type=checkbox].three-state-checkbox + .control-label {
   pointer-events: none;
 }
 
+.powered-by-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.powered-by-container img {
+  width: 38% !important;
+}
+.powered-by-container .mx-text {
+  display: block;
+  margin-top: 5px;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.mandatory-field .control-label::after {
+  content: "*";
+  color: red;
+  margin-left: 5px;
+}
+
 .login {
   display: flex;
   justify-content: center;

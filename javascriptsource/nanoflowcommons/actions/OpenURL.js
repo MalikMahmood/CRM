@@ -7,15 +7,17 @@
 // Other code you write will be lost the next time you deploy the project.
 import "mx-global";
 import { Big } from "big.js";
+
 // BEGIN EXTRA CODE
 // END EXTRA CODE
+
 /**
-* Opens the provided URL in the web browser.
-* @param {string} url - This field is required.
-* @returns {Promise.<boolean>}
-*/
+ * Opens the provided URL in the web browser.
+ * @param {string} url - This field is required.
+ * @returns {Promise.<boolean>}
+ */
 export async function OpenURL(url) {
-    // BEGIN USER CODE
+	// BEGIN USER CODE
     if (!url) {
         return Promise.reject(new Error("Input parameter 'Url' is required"));
     }
@@ -40,5 +42,5 @@ export async function OpenURL(url) {
         return Promise.resolve(true);
     }
     return Promise.resolve(false);
-    // END USER CODE
+	// END USER CODE
 }
