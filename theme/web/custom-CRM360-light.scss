@@ -472,3 +472,106 @@ label{
     color: #ffffff;
 }
 }
+
+
+.dashbord-drak{
+    .mx-layoutgrid {
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+        padding-right: 8px;
+        padding-left: 8px;
+        background: #000;
+    }
+    .mx-title {
+        margin: 0 0 8px 0;
+        color: #ffffff;
+        font-size: 31px;
+        font-weight: 600;
+    }
+    .mx-text {
+        white-space: pre-line;
+        color: #00ff9ea3;
+    }
+    .widget-chart {
+        position: relative;
+        filter: invert(0.9);
+    }
+    .wrap{
+    background: #191919;
+    border-radius: 5px;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }    
+ 
+   
+}
+
+
+.dashbord-light{
+    .mx-layoutgrid {
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+        padding-right: 8px;
+        padding-left: 8px;
+        background: #ffffff;
+    }
+    .mx-title {
+        margin: 0 0 8px 0;
+        color: #000000;
+        font-size: 31px;
+        font-weight: 600;
+    }
+    .mx-text {
+        white-space: pre-line;
+        color: #00ff9ea3;
+    }
+    .widget-chart {
+        position: relative;
+        filter: invert(0.1);
+    }
+    .wrap{
+    background: #e5e5e5;
+    border-radius: 5px;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }    
+ 
+   
+}
+
+
+.dashboard-popup-dark{
+    .mx-layoutgrid {
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+        padding-right: 8px;
+        padding-left: 8px;
+        background: #000;
+    }
+    .widget-chart {
+        position: relative;
+        filter: invert(0.9);
+    }
+}
+
+.dashboard-popup-light{
+    .mx-layoutgrid {
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+        padding-right: 8px;
+        padding-left: 8px;
+        background: #ffffff;
+    }
+    .widget-chart {
+        position: relative;
+        filter: invert(0.1);
+    }
+}
