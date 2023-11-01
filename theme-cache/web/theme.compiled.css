@@ -27409,4 +27409,38 @@ input[type=checkbox].three-state-checkbox + .control-label {
   filter: invert(0.1);
 }
 
+.dashbard2-dark .mx-layoutgrid {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 8px;
+  padding-left: 8px;
+  background: #000;
+}
+.dashbard2-dark .mx-text {
+  white-space: pre-line;
+  color: #fff;
+}
+.dashbard2-dark .widget-chart {
+  position: relative;
+  filter: invert(0.9);
+}
+
+.dashbard2-light .mx-layoutgrid {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 8px;
+  padding-left: 8px;
+  background: #ffffff;
+}
+.dashbard2-light .mx-text {
+  white-space: pre-line;
+  color: #000000;
+}
+.dashbard2-light .widget-chart {
+  position: relative;
+  filter: invert(0.1);
+}
+
 /*# sourceMappingURL=theme.compiled.css.map */

@@ -575,3 +575,44 @@ label{
         filter: invert(0.1);
     }
 }
+
+// DashBoard 2 
+
+.dashbard2-dark{
+    .mx-layoutgrid {
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+        padding-right: 8px;
+        padding-left: 8px;
+        background: #000;
+       
+    }
+    .mx-text {
+        white-space: pre-line;
+        color: #fff;
+    }
+    .widget-chart {
+        position: relative;
+        filter: invert(0.9);
+    }
+}
+
+.dashbard2-light{
+    .mx-layoutgrid {
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+        padding-right: 8px;
+        padding-left: 8px;
+        background: #ffffff;
+    }
+    .mx-text {
+        white-space: pre-line;
+        color: #000000;
+    }
+    .widget-chart {
+        position: relative;
+        filter: invert(0.1);
+    }
+}
