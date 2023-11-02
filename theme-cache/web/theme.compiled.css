@@ -26930,6 +26930,22 @@ input[type=checkbox].three-state-checkbox + .control-label {
   border: none;
 }
 
+.admin-cont {
+  background: #fff;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  transition: 0.6s;
+}
+
+.admin-cont:hover {
+  box-shadow: 0px 0px 3px;
+  scale: 0.9;
+}
+
 .main-ligt {
   background: #ffffff;
   height: inherit;

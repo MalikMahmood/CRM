@@ -353,3 +353,19 @@
 // div.widget-switch-brand-secondary.android .widget-switch .widget-switch-btn-wrapper.checked .widget-switch-btn {
 //     background: #ffffff;
 // }
+
+.admin-cont{
+    background: #fff;
+
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    transition: 0.6s;
+}
+.admin-cont:hover{
+    box-shadow: 0px 0px 3px;
+    scale: 0.9;
+}
